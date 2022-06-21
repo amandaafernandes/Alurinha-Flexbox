@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<h3>display: inline</h3>
+
+<p>Colocando <strong>display: inline</strong> nos elementos permite eles se posicionarem um do lado do outro, o problema do <strong>display: inline</strong> é que os elementos não aceitam mais que seja modificada tanto a width quanto a height. Isso limita MUITO nossas possibilidades.</p>
+
+<h3>display: inline-block</h3>
+
+<p>O <strong>display: inline-block</strong> permite os elementos se posicionarem um do lado do outro porém, diferentemente do <strong>display: inline</strong> ele permite que os elementos tenham sua width e height modificadas. Por esse motivo o <strong>display: inline-block</strong> é muito mais interessante na maioria dos casos do que o <strong>display: inline</strong>.</p>
+
+<p>O problema de usar <strong>display: inline-block</strong> é espaçar os elementos entre si. Para fazer isso teríamos que colocar margins e fazer contas.</p>
+
+<h3>float: left | right</h3>
+
+<p>O <strong>float</strong> é mais complicado, ele empurra o elemento para um dos lados (left | right) e os elementos que estão embaixo sobem. Isso nem sempre é o que a gente quer. Além do mais o <strong>float</strong> não permite que usemos a propriedade <strong>vertical-align: middle</strong> para alinhar os elementos verticalmente. Ou seja, para contornar isso uma possibilidade seria ter que colocar <strong>margin-top</strong> ou <strong>bottom</strong> nos elementos e usar os temidos números mágicos!</p>
+
+<h3>display: flex</h3>
+
+<p>O <strong>display: flex</strong> veio com o intuito de facilitar nossa vida nesses aspectos de posicionamento. Ele permite os elementos ficarem um do lado do outro, permite espaçar os elementos de forma mais intuitiva e sem ter que fazer cálculos. Além disso ele também permite alinhar os elementos verticalmente de forma fácil.</p>
+
+<p>O <strong>display: flex</strong> pode ser um pouco mais complicado de usar tendo em vista que existem diversas propriedades que vem junto da especificação <strong>flexible box</strong>, todavia tudo isso foi feito para justamente melhorar nosso código.</p>
+
+<p><strong>justify-content: space-xxxx;</strong> divisão do espaço que sobra no containe entre os elementos, dividindo de forma igual sem precisar fazer conta. O <strong>justify-content</strong> alinha horizontalmente, eixo x, no mains axis.</p>
+<h3>OBS*****</h3> complicado utilizar <strong>space-between</strong> ou <strong>space-around</strong> para o grid pois elas colocam comportamentos que não são legais para grids. Ambos deixariam super estranha a última linha do grid caso essa tivesse menos elementos do que o total de elementos por linha.
+
+<p><strong>align-items</strong>faz com que os elementos dentro do pai que está com flex se alinhem verticalmente. Ex: alinhar no centro podemos usar align-items: center, colocando essa propriedade no pai dos elementos que queremos alinhar.  O <strong>align-items</strong> alinha verticalmente, eixo y, no cross axis.</p>
+
+<p><strong>flex-direction</strong>(quando não especifica ele vai no padrão row) row é um ao lado do doutro)colum é um em bixo do outro - essa propriedade diz pro display de qual forma ele vai alinhar os elementos.Diz qual é o eixo principal, ele muda a direção </p>
+<h3>OBS*****</h3> Atenção ao usar o <strong>flex-direction</strong>, pois ele pode mudar o main axis - <strong>justify-content</strong> (horizontal) e cross axis - <strong>align-items</strong> (vertical).
+
+<p><strong>flex-wrap</strong>ele faz a quebra da coluna, se o elemento não coube no container, ele quebra e joga para o lado. (flex-wrap: warap)</p>
+
+<p><strong>flex-flow</strong> subistitui flex-direction e flex-wrap (flex-flow: colum, wrap).</p>
+
+<h2>SOMENTE flex container: </h2>
+
+<li>display: flex,</li>
+<li>justify-content,</li>
+<li>align-items,</li>
+<li>align-content,</li>
+<li>flex-direction,</li>
+<li>flex-wrap,</li>
+<li>flex-flow</li>
+
+<h2>SOMENTE flex items: </h2>
+
+<li>display: flex,</li>
+<li>order,</li>
+<li>flex-grow,</li>
+<li>flex-shrink,</li>
+<li>flex-basis,</li>
+<li>align-self.</li>
+
+<h3>***A propriedade display: flex pode ser usada nos dois. Se for usada em um flex item esse elemento será tanto um flex item quanto um flex container.</h3>
